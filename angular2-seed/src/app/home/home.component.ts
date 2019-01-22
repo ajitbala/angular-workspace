@@ -7,5 +7,6 @@ import {Employee} from '../models/employee.model';
 })
 export class HomeComponent {
 	languages = ["English", "Spanish","German"];
-	model = new Employee('Ajit','B');
+	model = new Employee('Ajit','B',true,"w2","English");
+
 }

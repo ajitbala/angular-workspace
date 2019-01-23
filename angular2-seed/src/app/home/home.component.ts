@@ -7,6 +7,13 @@ import {Employee} from '../models/employee.model';
 })
 export class HomeComponent {
 	languages = ["English", "Spanish","German"];
-	model = new Employee('Ajit','B',true,"w2","English");
+	model = new Employee('Ajit','B',true,"w2","default");
+	hasPrimaryLanguageError = false;
 
+	validatePrimaryLanguage(value){
+		if(value === 'default')
+			this.hasPrimaryLanguageError = true;
+		else
+			this.hasPrimaryLanguageError = false;
+	}
 }

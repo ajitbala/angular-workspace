@@ -1,6 +1,6 @@
 <div class="container">
 	<h3>Angular Forms</h3>
-	<form #form="ngForm" novalidate>
+	<form #form="ngForm" (submit)="submitForm(form)" novalidate>
 		<div class="form-group" [class.has-error]="firstname.invalid && firstname.dirty">
 			<label>First Name</label>
 			<input #firstname="ngModel" pattern="...+" required type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname">
@@ -8,9 +8,12 @@
 		<div *ngIf="firstname.invalid && firstname.dirty" class="alert alert-danger">
 			Firstname is Required
 		</div>
-		<div class="form-group">
+		<div class="form-group" [class.has-error]="lastname.invalid && lastname.dirty">
 			<label>Last Name</label>
-			<input type="text" class="form-control" name="Lastname"  [(ngModel)]="model.lastname">
+			<input #lastname="ngModel" required type="text" class="form-control" name="Lastname"  [(ngModel)]="model.lastname">
+		</div>
+		<div *ngIf="lastname.invalid && lastname.dirty" class="alert alert-danger">
+			Lastname is Required
 		</div>
 		<div class="checkbox">
 			<label>
@@ -42,7 +45,7 @@
 				</option>
 			</select>
 		</div>
-		<button class="btn btn-primary" type="submit">OK</button>
+		<button class="btn btn-primary" type="submit" [disabled]="form.invalid">OK</button>
 	</form>
 
 	Model : {{ model | json }}

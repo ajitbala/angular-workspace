@@ -22,6 +22,8 @@ var server = http.createServer(function (req,res){
 
 			}
 		}
+
+		
 			var responseData= JSON.stringify(data);
 			res.end(responseData);
 			console.log('get : ', responseData);

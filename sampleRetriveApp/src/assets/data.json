@@ -1,0 +1,29 @@
+{
+	
+	"data":[
+		{
+			"name":"Ajit Vadukoot",
+			"role":"Software Dev"
+		},
+		{
+			"name":"Jon Snow",
+			"role":"King in the North"
+		},
+		{
+			"name":"Tony Stark",
+			"role":"Iron Man"
+		},
+		{
+			"name":"Steve Banner",
+			"role":"Cap. America"
+		},
+		{
+			"name":"Thor",
+			"role":"Son of Odin"
+		},
+		{
+			"name":"Katekar",
+			"role":"Constable"
+		}
+	]
+}

@@ -1,6 +1,6 @@
 <div class="container">
 	<h3>Angular Forms</h3>
-	<form #form="ngForm" (submit)="submitForm(form)" novalidate>
+	<!--<form #form="ngForm" (submit)="submitForm(form)" novalidate>
 		<div class="form-group" [class.has-error]="firstname.invalid && firstname.dirty">
 			<label>First Name</label>
 			<input #firstname="ngModel" pattern="...+" required type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname">
@@ -49,5 +49,12 @@
 	</form>
 
 	Model : {{ model | json }}
+-->
+
+<div class="form-group" style="display: inline-block;">
+<datepicker name="startDate" [(ngModel)]="startDate" [showWeeks]="false"></datepicker> 
+
+
+	{{ startDate }}
 </div>
 
